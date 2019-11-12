@@ -1,0 +1,5 @@
+<% if current_user %>
+ $('.header_form').html("<%= escape_javascript(render partial: 'users/user_header_action') %>")
+<% else %>
+  $('.header_form').html("<%= escape_javascript(render partial: 'users/user_login_action') %>")
+<%end%>
