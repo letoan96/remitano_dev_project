@@ -1,5 +1,5 @@
 <li class="nav-item active">
-  <span class="nav-link">Welcome <span><%= current_user["email"] %></span></span>
+  <span class="nav-link" id="welcome_msg">Welcome <span><%= current_user["email"] %></span></span>
 </li>
 <button class="btn btn-outline-success my-2 my-sm-0 mr-2">Share a movie</button>
-<%= button_to "Logout", log_out_path, class: 'btn btn-outline-secondary my-2 my-sm-0', method: 'delete', remote: true %>
+<%= button_to "Logout", log_out_path, class: 'btn btn-outline-secondary my-2 my-sm-0', id: 'logout', method: 'delete', remote: true %>

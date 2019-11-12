@@ -1,5 +1,5 @@
-<%= form_with(url: credentials_path, method: :post, class: 'form-inline mt-2 mt-md-0') do |form|  %>
-  <%= form.text_field :email, placeholder: 'Email', class: 'form-control mr-sm-2' %>
-  <%= form.password_field :password, placeholder: 'Password', class: 'form-control mr-sm-2' %>
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login/Register</button>
+<%= form_with(url: credentials_path, method: :post, class: 'form-inline mt-2 mt-md-0', id: 'login_form') do |form|  %>
+  <%= form.text_field :email, placeholder: 'Email', class: 'form-control mr-sm-2', required: true %>
+  <%= form.password_field :password, placeholder: 'Password', class: 'form-control mr-sm-2', required: true %>
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="login">Login/Register</button>
 <% end %>
