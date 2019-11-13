@@ -1,7 +1,9 @@
 <div class="container" style="margin-top: 70px;">
-  <% @videos.each do |video| %>
-    <div class="row justify-content-center">
-      <%= render partial: 'videos/video', locals: {video: video} %>
-    </div>
+  <% if videos %>
+    <% @videos.each do |video| %>
+      <div class="row justify-content-center">
+        <%= render partial: 'videos/video', locals: {video: video} %>
+      </div>
+    <% end %>
   <% end %>
 </div>
