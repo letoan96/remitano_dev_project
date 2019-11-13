@@ -1,16 +1,17 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Remideo</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav ml-auto header_form">
-      <% if current_user %>
-        <%= render partial: 'users/user_header_action' %>
-      <% else %>
-        <%= render partial: 'users/user_login_action' %>
-      <% end %>
-    </ul>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<%= root_path %>"><i class="fas fa-home mr-2"></i>Funny Movies</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto header_form">
+        <% if current_user %>
+          <%= render partial: 'users/user_header_action' %>
+        <% else %>
+          <%= render partial: 'users/user_login_action' %>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </nav>
-

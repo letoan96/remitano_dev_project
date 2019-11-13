@@ -14,3 +14,26 @@
  *= require_self
  */
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+fieldset{
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+}
+p#innerPara{
+  padding: 20px;
+}
+
+legend {
+  margin-left: 20px;
+  width: 290px;
+  padding: 10px 20px;
+}
+
+.form-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
