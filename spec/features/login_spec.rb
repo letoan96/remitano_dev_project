@@ -11,9 +11,10 @@ describe "the signin process", :type => :feature do
      fill_in 'email', with: 'user@example.com'
      fill_in 'password', with: 'password'
    click_button 'Login/Register'
+   sleep(3)
    expect(page).to have_text('Welcome user@example.com')
    expect(page).to have_button('Logout')
-   expect(page).to have_button('Share a movie')
+   expect(page).to have_link('Share a movie')
  end
 
  it "won't sign me in if email is not valid format", js: true do
@@ -21,9 +22,10 @@ describe "the signin process", :type => :feature do
      fill_in 'email', with: 'userexample.com'
      fill_in 'password', with: 'password'
    click_button 'Login/Register'
+   wait_for_ajax
    expect(page).not_to have_text('Welcome user@example.com')
    expect(page).not_to have_button('Logout')
-   expect(page).not_to have_button('Share a movie')
+   expect(page).not_to have_link('Share a movie')
  end
 
  it "won't sign me in if password is blank", js: true do
@@ -31,8 +33,9 @@ describe "the signin process", :type => :feature do
      fill_in 'email', with: 'userexample.com'
      fill_in 'password', with: ''
    click_button 'Login/Register'
+   wait_for_ajax
    expect(page).not_to have_text('Welcome user@example.com')
    expect(page).not_to have_button('Logout')
-   expect(page).not_to have_button('Share a movie')
+   expect(page).not_to have_link('Share a movie')
  end
 end
