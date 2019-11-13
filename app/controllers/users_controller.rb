@@ -1,11 +1,7 @@
 class UsersController < ApplicationController
-  def new
+  def new; end
       
-  end
-
-  def create
-    
-  end
+  def create;end
 
   def sign_up_or_login
     user = User.find_for_authentication(:email => params[:email])
