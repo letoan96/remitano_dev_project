@@ -1,5 +1,12 @@
 <div class="row justify-content-center">
-  <div class="col-md-6">  
+  <div class="col-md-3">
+    <%= raw video.embed_code %>  
   </div>
-  <div class="col-md-6"></div>
+  <div class="col-md-8 ml-5">
+    <p style="color: red;"><%=  video.title %></p>
+    <p><b>Shared by: <%=  video.user.email %></b></p>
+    <h6>Description:</h6> 
+    <p><%= video.description %></p>
+  </div>
 </div>
+<hr>
