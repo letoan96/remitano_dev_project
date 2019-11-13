@@ -39,6 +39,7 @@ gem 'jquery-rails'
 gem 'faker'
 gem 'font-awesome-sass', '~> 5.11.2'
 gem 'video_info'
+gem 'sidekiq'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
